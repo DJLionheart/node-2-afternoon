@@ -14,7 +14,7 @@ module.exports = {
         const dbInstance = req.app.get('db');
 
         dbInstance.read_product( req.params.id )
-            .then( () => res.status(200).send( product ) )
+            .then( (product) => res.status(200).send( product ) )
             .catch( () => res.status(500).send() );
     },
 
@@ -23,7 +23,7 @@ module.exports = {
         const dbInstance = req.app.get('db');
 
         dbInstance.read_products()
-            .then( () => res.status(200).send( products ) )
+            .then( (products) => res.status(200).send(products) )
             .catch( () => res.status(500).send() )
     },
 

@@ -16,7 +16,7 @@ app.get('/api/products', ctrl.getAll);
 
 app.get('/api/product/:id', ctrl.getOne);
 
-app.put('/api/product/:id?desc', ctrl.update);
+app.put('/api/product/:id', ctrl.update);
 
 app.post('/api/product', ctrl.create);
 
